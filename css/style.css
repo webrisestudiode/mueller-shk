@@ -760,3 +760,57 @@ textarea.form-control {
   color: var(--color-dark);
   transform: scale(1.05);
 }
+/* Mobile Fixes */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card {
+    flex-direction: column !important;
+    padding: 25px 20px !important;
+  }
+
+  .card > div {
+    width: 100% !important;
+    min-width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .card img, 
+  .grid img {
+    max-height: 300px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    object-fit: cover !important;
+  }
+
+  /* Task 3: Advantages with checkmarks alignment */
+  ul li {
+    display: flex !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  ul li i {
+    margin-top: 6px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .service-selection-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
