@@ -780,22 +780,29 @@ textarea.form-control {
 
   .card {
     flex-direction: column !important;
-    padding: 25px 20px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
   }
 
   .card > div {
     width: 100% !important;
     min-width: 100% !important;
-    padding: 20px !important;
+    padding: 30px 25px !important;
+  }
+
+  .card > div:first-child,
+  .team-member-img-wrap {
+    padding: 0 !important;
+    height: auto !important;
   }
 
   .card img, 
-  .grid img {
-    max-height: 300px !important;
+  .grid img,
+  .team-member-img {
     width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
+    height: 250px !important;
     object-fit: cover !important;
+    border-radius: 0 !important;
   }
 
   /* Task 3: Advantages with checkmarks alignment */
