@@ -781,13 +781,27 @@ textarea.form-control {
   .card {
     flex-direction: column !important;
     padding: 0 !important;
-    overflow: hidden !important;
+    overflow: visible !important;
   }
 
   .card > div {
     width: 100% !important;
     min-width: 100% !important;
     padding: 30px 25px !important;
+  }
+
+  .card .card-title,
+  .card .card-text {
+    padding: 0 25px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .card .btn {
+    margin: 10px 25px 30px !important;
+    padding: 14px 20px !important;
+    display: block !important;
+    width: auto !important; /* Let margins define width */
+    text-align: center !important;
   }
 
   .card > div:first-child,
