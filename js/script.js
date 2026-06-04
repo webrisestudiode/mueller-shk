@@ -257,6 +257,15 @@ document.addEventListener('DOMContentLoaded', () => {
       demoCities.forEach(function(c) { replaceInText(document.body, c, stadt); });
       document.title = demoCities.reduce(function(t,c){ return t.split(c).join(stadt); }, document.title);
     }
+    // Logo direkt ersetzen – Text ist auf mehrere Nodes aufgeteilt
+    if (firma) {
+      var logoEl = document.querySelector('a.logo, a.navbar__logo, a.navbar-brand');
+      if (logoEl) {
+        var iconEl = logoEl.querySelector('i, .logo-icon, .navbar__logo-icon');
+        var iconHTML = iconEl ? iconEl.outerHTML : '';
+        logoEl.innerHTML = iconHTML + (iconHTML ? ' ' : '') + firma;
+      }
+    }
     if (telefon) {
       var demoPhones = ['0711 123456', '0711123456'];
       demoPhones.forEach(function(ph) { replaceInText(document.body, ph, telefon); });
